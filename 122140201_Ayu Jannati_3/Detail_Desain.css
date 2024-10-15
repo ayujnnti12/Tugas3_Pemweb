@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff7cc; 
+    display: flex;
+}
+  
+/* Navigasi */
+.navigation-panel {
+    background-color: #f7d559; 
+    color: black;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+  
+.nav-links a:hover {
+    color: #c29900; 
+}
+  
+/* Konten */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    background: linear-gradient(to right, #fff7cc, #ffe680);
+}
+  
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+}
+  
+.box {
+    background-color: #f7d559;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 30%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+  
+.box:hover {
+    transform: scale(1.05);
+    background-color: #f1c232;
+}
+  
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #c29900;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Desain Responsif */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .navigation-panel {
+        width: 200px;
+    }
+
+    .box {
+        min-width: 45%;
+    }
+}
+
+/* Handphone */
+@media (max-width: 600px) {
+    .navigation-panel {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .box {
+        min-width: 90%;
+    }
+}
